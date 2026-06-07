@@ -91,4 +91,3 @@ npm run dev
 	- Update `pyproject.toml` for Python deps; use `npm` in `frontend/` for UI deps.
 	- To add dashboards, place JSON in `grafana/dashboards/` and update provisioning.
 
-If you'd like, I can create a release tag and open a final PR with this handoff README. 
