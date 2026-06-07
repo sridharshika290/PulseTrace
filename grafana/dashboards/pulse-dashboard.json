@@ -1,0 +1,15 @@
+{
+  "annotations": {"list": []},
+  "panels": [
+    {
+      "type": "graph",
+      "title": "Backend Messages",
+      "targets": [
+        {"expr": "pulse_messages_total", "legendFormat": "messages"}
+      ],
+      "gridPos": {"x": 0, "y": 0, "w": 24, "h": 9}
+    }
+  ],
+  "title": "PulseTrace Overview",
+  "version": 1
+}

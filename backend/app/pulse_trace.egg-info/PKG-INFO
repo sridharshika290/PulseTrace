@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: pulse-trace
+Version: 0.1.0
+Summary: PulseTrace audit sidecar for event-driven systems
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.111
+Requires-Dist: uvicorn[standard]>=0.30
+Requires-Dist: pydantic>=2.7
+Requires-Dist: redis>=5.0
+Requires-Dist: aiokafka>=0.10
+Requires-Dist: prometheus-client>=0.16
+Requires-Dist: opentelemetry-api>=1.13
+Requires-Dist: opentelemetry-sdk>=1.13
+Requires-Dist: opentelemetry-exporter-otlp>=1.13
+Requires-Dist: opentelemetry-instrumentation-fastapi>=0.40
+Requires-Dist: opentelemetry-instrumentation-redis>=0.40
+Provides-Extra: vault
+Requires-Dist: requests>=2.28; extra == "vault"
+Provides-Extra: logging
+Requires-Dist: python-json-logger>=2.0; extra == "logging"
+Provides-Extra: redis
+Requires-Dist: redis>=5.0; extra == "redis"
+Provides-Extra: kafka
+Requires-Dist: aiokafka>=0.10; extra == "kafka"
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23; extra == "dev"
+Requires-Dist: httpx>=0.27; extra == "dev"
+Provides-Extra: test
+Requires-Dist: jsonschema>=4.0; extra == "test"
+
+# PulseTrace Backend
+
+FastAPI backend for the PulseTrace audit sidecar.

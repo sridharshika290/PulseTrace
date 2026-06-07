@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AuditEvent",
+  "type": "object",
+  "required": ["message_id", "topic", "partition", "sequence", "kind", "timestamp"],
+  "properties": {
+    "message_id": {"type": "string"},
+    "topic": {"type": "string"},
+    "partition": {"type": "integer"},
+    "sequence": {"type": "integer"},
+    "kind": {"type": "string"},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "processing_ms": {"type": "integer"},
+    "lag_ms": {"type": "integer"}
+  }
+}

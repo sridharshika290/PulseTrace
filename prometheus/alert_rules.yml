@@ -1,0 +1,20 @@
+groups:
+  - name: pulsetrace.rules
+    rules:
+      - alert: HighErrorRate
+        expr: increase(http_requests_total{job="pulsetrace-backend",status=~"5.."}[5m]) > 10
+        for: 2m
+        labels:
+          severity: page
+        annotations:
+          summary: "High 5xx error rate for PulseTrace backend"
+          description: "Backend is returning many 5xx responses."
+
+      - alert: KafkaUnavailable
+        expr: up{job="kafka"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Kafka service down"
+          description: "Kafka is not reachable by Prometheus target scraping."
